@@ -1,0 +1,35 @@
+.cgpa-box {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: rgb(171, 226, 215);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.course-table th,
+.course-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.course-table th {
+  background-color: rgba(233,236,239,255);
+  color: black;
+}
+
+.course-table tr:hover {
+  background-color: #f9f9f9;
+}

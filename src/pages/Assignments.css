@@ -1,0 +1,35 @@
+.filters {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.assignment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.assignment-table th,
+.assignment-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.assignment-table th {
+  background-color: #e9ecef;
+  color:black;
+}

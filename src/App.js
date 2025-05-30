@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
+import Dashboard from './pages/Dashboard';
+import Courses from './pages/Courses';
+import CGPA from './pages/CGPA';
+import Assignments from './pages/Assignments';
 
 function App() {
+  const [activeItem, setActiveItem] = useState('Dashboard');
+
+  const renderPage = () => {
+    switch (activeItem) {
+      case 'Courses':
+        return <Courses />;
+      case 'CGPA':
+        return <CGPA />;
+      case 'Assignments':
+        return <Assignments />;
+      default:
+        return <Dashboard />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Topbar activeItem={activeItem} />
+      <div className="main-content">
+        <Sidebar activeItem={activeItem} setActiveItem={setActiveItem} />
+        <div className="page">
+          {renderPage()}
+        </div>
+      </div>
     </div>
   );
 }
